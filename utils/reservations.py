@@ -7,6 +7,10 @@ from linebot.models import (
 from .database import set_user_session ,generate_download_key
 from flask import Flask, request, abort, send_file, render_template, jsonify
 import csv
+import os
+
+host_url = os.getenv("host_url")
+
 
 def get_user_level(user_id):
     conn = sqlite3.connect('reservations.db')
@@ -177,7 +181,7 @@ def cancel_reservation(event, user_id, date, time,line_bot_api):
 
 def send_download_link(event,line_bot_api):
     key = generate_download_key()
-    download_link = f'https://chohouse.duckdns.org:9000/download_csv?key={key}'
+    download_link = f'{host_url}/download_csv?key={key}'
     text_message = TextSendMessage(
         text=f"點擊下面的連結下載 CSV 檔案：\n{download_link}"
     )
