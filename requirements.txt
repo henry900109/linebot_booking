@@ -1,0 +1,5 @@
+Flask==3.0.3
+line-bot-sdk==3.11.0
+uWSGI==2.0.26
+python-dotenv
+pandas
