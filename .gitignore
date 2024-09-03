@@ -1,9 +1,21 @@
-.venv
+# 虛擬環境
+.venv/
+
+# 環境變數設定
 .env
-.log
-db
+
+# 日誌文件
+*.log
+
+# 數據庫文件
+db/
+reservations.db
+
+# uWSGI 配置與運行文件
 uwsgi.ini
-uwsgi.log   
+uwsgi.log
 uwsgi.pid
-__pycache__
+
+# Python 編譯過的字節碼
+__pycache__/
 

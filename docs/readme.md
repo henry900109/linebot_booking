@@ -35,3 +35,4 @@
 LINE_CHANNEL_ACCESS_TOKEN=your_line_channel_access_token
 LINE_CHANNEL_SECRET=your_line_channel_secret
 LIFF_ID=your_liff_ID
+host_url=host_url
